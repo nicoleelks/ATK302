@@ -7,8 +7,6 @@ function draw() {
   // put drawing code here
   background('#a3fffa');
   noStroke();
-  stroke(255) ;
-  noStroke() ; 
 
 
   if (mouseIsPressed) {
