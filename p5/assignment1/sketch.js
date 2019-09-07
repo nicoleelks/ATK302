@@ -8,18 +8,34 @@ function draw() {
   background('#a3fffa');
   noStroke();
 
+  let s = 'This is ziggy. By day she a normal house cat but, by night she is ruthless ninja cat who fights crime and all the other cats from stealing catnip.';
+  fill(50);
+  text(s, 20, 50, 700, 100); // Text wraps within text box
+  textSize(20)
 
   if (mouseIsPressed) {
-    fill('red');
+    fill('black');
+    rect(255,517, 100, 300);
+
+    fill('brown');
+    rect(247,600, 35, 70);
+
+    fill('brown');
+    rect(333,600, 35, 70);
+
+    fill('black');
+    arc(370, 700, 50, 50, PI, TWO_PI);
+
+    fill('#d99352');
     ellipse(310,400, 300, 250);
 
-    fill('gray');
+    fill('red');
     triangle(189,246, 167,356, 249,286);
 
-    fill('gray');
+    fill('red');
     triangle(439,242, 368,286, 449,352);
 
-    fill('gray');
+    fill('black');
     triangle(299,442, 267,397, 338,398);
 
     fill('black');
@@ -34,15 +50,49 @@ function draw() {
     fill('black');
     ellipse(344,342, 20, 30);
 
-    fill('red');
+    fill('black');
     triangle(197,276, 189,317, 222,289);
 
-    fill('red');
+    fill('black');
     triangle(428,267, 395,288, 431,321);
+
+    fill('brown');
+    arc(370, 700, 100, 100, PI, TWO_PI);
+
+    fill('brown');
+    arc(240, 700, 100, 100, PI, TWO_PI);
+
+    fill('black');
+    arc(270, 700, 70, 70, PI, TWO_PI);
+
+    fill('black');
+    arc(340, 700, 70, 70, PI, TWO_PI);
+
+    fill('brown');
+    arc(264, 600, 35, 55, PI, TWO_PI);
+
+    fill('brown');
+    arc(350, 600, 35, 55, PI, TWO_PI);
+
+    fill('#d6a676');
+    rect(300,610, 10, 90);
 
 
     } else {
-  fill('#d99352');
+
+  fill('#875729');
+  rect(255,517, 100, 300);
+
+  fill('#d6a676');
+  rect(247,600, 35, 70);
+
+  fill('#d6a676');
+  rect(333,600, 35, 70);
+
+  fill('black');
+  arc(370, 700, 50, 50, PI, TWO_PI);
+
+  fill('#ba8857');
   ellipse(310,400, 300, 250);
 
   fill('brown');
@@ -72,15 +122,33 @@ function draw() {
   fill('pink');
   triangle(428,267, 395,288, 431,321);
 
+  fill('#d6a676');
+  arc(370, 700, 100, 100, PI, TWO_PI);
+
+  fill('#d6a676');
+  arc(240, 700, 100, 100, PI, TWO_PI);
+
   fill('black');
-  rect(332, 398, 100, 5);
+  arc(270, 700, 70, 70, PI, TWO_PI);
+
+  fill('black');
+  arc(340, 700, 70, 70, PI, TWO_PI);
+
+  fill('#d6a676');
+  arc(264, 600, 35, 55, PI, TWO_PI);
+
+  fill('#d6a676');
+  arc(350, 600, 35, 55, PI, TWO_PI);
+
+  fill('#d6a676');
+  rect(300,610, 10, 90);
 
 
 
 
 
-  fill('black') ;
-  text(mouseX + ',' + mouseY, 30, 30);
+
+
 }
 
 function mouseReleased() {
