@@ -37,14 +37,15 @@ switch(myState){
     y++ ;
   }
 
+}
 
-  textSize(18);
-  text("Click the screen first.  My volume is " + vol, 80, 400);
+}
+
+
 
 
 
 
 // you need to click the screen before the mic input will work.
 function touchStarted() {
-getAudioContext().resume();
-}
+getAudioContext().resume(); }
