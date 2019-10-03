@@ -242,7 +242,7 @@ function draw() {
 
     myTimer++;
     if (myTimer >= 100) {
-      myState = 0;
+      myState = 3;
       myTimer = 0;
     }
 
