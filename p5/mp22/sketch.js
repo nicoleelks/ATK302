@@ -152,7 +152,7 @@ function draw() {
 
       fill('#d6a676');
       rect(300, 610, 10, 90);
-
+//mouse
       fill('black');
       arc(50, 700, 100, 100, PI, TWO_PI);
 
@@ -234,7 +234,7 @@ function draw() {
 
       fill('#d6a676');
       rect(300, 610, 10, 90);
-
+//mouse
       fill('black');
       arc(50, 700, 100, 100, PI, TWO_PI);
 
@@ -247,13 +247,13 @@ function draw() {
       break;
 
     case 3:
-      fill('black');
-      arc(x, 700, 100, 100, PI, TWO_PI);
-      fill('brown');
-      ellipse(x, 680, 50, 40);
+      //fill('black');
+      //arc(x, 700, 100, 100, PI, TWO_PI);
+      //fill('brown');
+    //  ellipse(x, 680, 50, 40);
 
-      doTimer(1, 200);
-      velocity = 5;
+      //doTimer(1, 200);
+      //velocity = 50;
       //x = x + velocity;
       //if (x > width) {
       //  x = 0;
@@ -269,6 +269,7 @@ function draw() {
 
 
 fill('black');
+//mouse
 arc(x, 700, 100, 100, PI, TWO_PI);
 fill('brown');
 ellipse(x, 680, 50, 40);
