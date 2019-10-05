@@ -159,10 +159,7 @@ function draw() {
     fill('brown');
     ellipse(100,680, 50, 40);
 
-    myTimer++;
-    if (myTimer >= 100) {
-      myState = 2;
-      myTimer = 0;
+
     }
 
     break;
@@ -244,10 +241,7 @@ function draw() {
     fill('brown');
     ellipse(100,680, 50, 40);
 
-    myTimer++;
-    if (myTimer >= 100) {
-      myState = 3;
-      myTimer = 0;
+    
     }
 
     break ;
