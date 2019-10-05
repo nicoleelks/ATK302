@@ -285,8 +285,12 @@ if (myTimer >= 100) {
 
 
 function mouseReleased() {
-  console.log(mouseX + ", " + mouseY);
-}
+  myState += 1 ;
+  if (myState > 2) {
+    myState = 0 ;
+  }
+
+  }
 
 
 
