@@ -281,13 +281,13 @@ if (x > width) {
 }
 
 
-function doTimer(variableState, variableTimer) {
-  timer--;
-  if (timer <= 0) {
-    timer = variableTimer;
-    myState = variableState;
-  }
-}
+//function doTimer(variableState, variableTimer) {
+  //timer--;
+  //if (timer <= 0) {
+    //timer = variableTimer;
+    //myState = variableState;
+  //}
+//}
 
 function mouseReleased() {
   myState += 1;
