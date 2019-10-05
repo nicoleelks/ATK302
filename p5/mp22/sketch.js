@@ -1,6 +1,7 @@
 var myState = 0;
-var myTimer = 0;
+var myTimer = 10;
 var x = 0;
+var velocity = 3;
 
 function setup() {
   createCanvas(800, 800);
@@ -11,7 +12,7 @@ function setup() {
 function draw() {
   // put drawing code here
 
-  switch(myState){
+  switch (myState) {
 
     case 0:
     fill('#875729');
@@ -249,30 +250,36 @@ function draw() {
 
     break ;
 
-    case 3:
-    fill('black');
-    arc(x, 700, 100, 100, PI, TWO_PI);
-    fill('brown');
-    ellipse(x ,680, 50, 40);
+    //case 3:
+    //fill('black');
+    //arc(x, 700, 100, 100, PI, TWO_PI);
+    //fill('brown');
+    //ellipse(x ,680, 50, 40);
 
-    x = x + 5;
+    //x = x + velocity;
+    //if (x > width) {
+    //  x = 0;
+    //}
 
-    if (x > 800) {
-      x = 0;
-    }
-
-       myTimer++;
-       if (myTimer >= 100) {
-         myState = 4;
-         myTimer = 0;
-       }
-    break;
-
-    case 4:
-    break;
-
-
-
+       //myTimer++;
+       //if (myTimer >= 100) {
+         //myState = 4;
+        // myTimer = 0;
+       //}
+    //break;
+}
+fill('black');
+arc(x, 700, 100, 100, PI, TWO_PI);
+fill('brown');
+ellipse(x ,680, 50, 40);
+x = x + velocity;
+if (x > width) {
+  x = 0;
+}
+myTimer++;
+if (myTimer >= 100) {
+  myState = 4;
+  myTimer = 0;
 }
 }
 
