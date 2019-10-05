@@ -59,7 +59,7 @@ function draw() {
 fill('black');
 arc(x, 700, 100, 100, PI, TWO_PI);
 fill('brown');
-ellipse(x + 25, 680, 50, 40);
+ellipse(x + 45, 680, 50, 40);
   x = x + velocity;
   if (x > width) {
     x = 0;
