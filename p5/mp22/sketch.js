@@ -1,5 +1,6 @@
 var myState = 0;
 var myTimer = 0;
+var x = 0;
 
 function setup() {
   createCanvas(800, 800);
@@ -242,13 +243,29 @@ function draw() {
 
     myTimer++;
     if (myTimer >= 100) {
-      myState = 0;
+      myState = 3;
       myTimer = 0;
     }
 
     break ;
 
     case 3:
+    fill('black');
+    arc(x, 700, 100, 100, PI, TWO_PI);
+    fill('brown');
+    ellipse(x ,680, 50, 40);
+
+    x = x + 5;
+
+    if (x > 800) {
+      x = 0;
+    }
+
+       myTimer++;
+       if (myTimer >= 100) {
+         myState = 4;
+         myTimer = 0;
+       }
     break;
 
     case 4:
@@ -260,6 +277,9 @@ function draw() {
 }
 
 
+function mouseReleased() {
+  console.log(mouseX + ", " + mouseY);
+}
 
 
 
