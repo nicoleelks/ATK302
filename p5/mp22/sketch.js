@@ -280,11 +280,7 @@ x = x + velocity;
 if (x > width) {
   x = 0;
 }
-myTimer++;
-if (myTimer >= 100) {
-  myState = 4;
-  myTimer = 0;
-}
+
 }
 
 function doTimer(variableState, variableTimer) {
