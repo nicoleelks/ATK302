@@ -160,9 +160,9 @@ function draw() {
     ellipse(100,680, 50, 40);
 
 
-    }
 
-    break;
+
+
 
     case 2:
     fill('#875729');
@@ -241,8 +241,8 @@ function draw() {
     fill('brown');
     ellipse(100,680, 50, 40);
 
-    
-    }
+
+
 
     break ;
 
@@ -265,6 +265,7 @@ function draw() {
         // myTimer = 0;
        //}
     //break;
+}
 }
 fill('black');
 arc(x, 700, 100, 100, PI, TWO_PI);
