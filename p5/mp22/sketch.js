@@ -276,7 +276,7 @@ if (x > width) {
   x = 0;
 }
 
-}
+
 
 function doTimer(variableState, variableTimer) {
   timer--;
