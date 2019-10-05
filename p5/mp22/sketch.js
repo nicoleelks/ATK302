@@ -1,7 +1,8 @@
 var myState = 0;
-var myTimer = 10;
+//var myTimer = 10;
 var x = 0;
 var velocity = 3;
+var timer = 200 ;
 
 function setup() {
   createCanvas(800, 800);
@@ -78,11 +79,12 @@ function draw() {
     fill('#d6a676');
     rect(300,610, 10, 90);
 
-    myTimer++;
-    if (myTimer >= 100) {
-      myState = 1;
-      myTimer = 0;
-    }
+  //  myTimer++;
+  //  if (myTimer >= 100) {
+    //  myState = 1;
+    //  myTimer = 0;
+  //  }
+
 
 
     break;
@@ -250,12 +252,14 @@ function draw() {
 
     break ;
 
-    //case 3:
-    //fill('black');
-    //arc(x, 700, 100, 100, PI, TWO_PI);
-    //fill('brown');
-    //ellipse(x ,680, 50, 40);
+    case 3:
+    fill('black');
+    arc(x, 700, 100, 100, PI, TWO_PI);
+    fill('brown');
+    ellipse(x ,680, 50, 40);
 
+    doTimer (1, 200) ;
+    velocity = 5 ;
     //x = x + velocity;
     //if (x > width) {
     //  x = 0;
@@ -283,6 +287,13 @@ if (myTimer >= 100) {
 }
 }
 
+function doTimer(variableState, variableTimer) {
+  timer--;
+  if (timer <=0) {
+    timer = variableTimer;
+    myState = variableState;
+  }
+}
 
 function mouseReleased() {
   myState += 1 ;
