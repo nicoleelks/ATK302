@@ -291,7 +291,7 @@ if (x > width) {
 
 function mouseReleased() {
   myState += 1;
-  if (myState > 2) {
+  if (myState > 3) {
     myState = 0;
   }
 
