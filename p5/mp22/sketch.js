@@ -243,10 +243,10 @@ function draw() {
       fill('#ba8857');
       ellipse(310, 400, 300, 250);
 
-      fill('brown');
+      fill('red');
       triangle(189, 246, 167, 356, 249, 286);
 
-      fill('brown');
+      fill('red');
       triangle(439, 242, 368, 286, 449, 352);
 
       fill('brown');
@@ -258,10 +258,10 @@ function draw() {
       fill('#a3fffa');
       ellipse(344, 342, 40, 50);
 
-      fill('black');
+      fill('red');
       ellipse(255, 350, 20, 30);
 
-      fill('black');
+      fill('red');
       ellipse(345, 350, 20, 30);
 
       fill('black');
@@ -318,10 +318,10 @@ function draw() {
       fill('#ba8857');
       ellipse(310, 400, 300, 250);
 
-      fill('brown');
+      fill('red');
       triangle(189, 246, 167, 356, 249, 286);
 
-      fill('brown');
+      fill('red');
       triangle(439, 242, 368, 286, 449, 352);
 
       fill('brown');
@@ -333,10 +333,10 @@ function draw() {
       fill('#a3fffa');
       ellipse(344, 342, 40, 50);
 
-      fill('black');
+      fill('red');
       ellipse(255, 350, 20, 30);
 
-      fill('black');
+      fill('red');
       ellipse(345, 350, 20, 30);
 
       fill('black');
