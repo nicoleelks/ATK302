@@ -13,6 +13,11 @@ function setup() {
 
 function draw() {
   // put drawing code here
+  let s = 'Click the screen when the mouse is on the right side of the cat for a suprise!';
+  fill(50);
+  text(s, 20, 50, 700, 100); // Text wraps within text box
+  textSize(20)
+
   background(100);
 
   switch (myState) {
