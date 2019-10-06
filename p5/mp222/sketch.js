@@ -148,7 +148,7 @@ function draw() {
 
       fill('#d6a676');
       rect(300, 610, 10, 90);
-      
+
       doTimer(1, 200);
       velocity = 5;
       break;
@@ -298,7 +298,77 @@ function draw() {
       break;
 
     case 4:
-    break;
+      fill('#875729');
+      rect(255, 517, 100, 175);
+
+      fill('#d6a676');
+      rect(247, 600, 35, 70);
+
+      fill('#d6a676');
+      rect(333, 600, 35, 70);
+
+      fill('black');
+      arc(370, 700, 50, 50, PI, TWO_PI);
+
+      fill('#ba8857');
+      ellipse(310, 400, 300, 250);
+
+      fill('brown');
+      triangle(189, 246, 167, 356, 249, 286);
+
+      fill('brown');
+      triangle(439, 242, 368, 286, 449, 352);
+
+      fill('brown');
+      triangle(299, 442, 267, 397, 338, 398);
+
+      fill('#a3fffa');
+      ellipse(253, 341, 40, 50);
+
+      fill('#a3fffa');
+      ellipse(344, 342, 40, 50);
+
+      fill('black');
+      ellipse(255, 350, 20, 30);
+
+      fill('black');
+      ellipse(345, 350, 20, 30);
+
+      fill('black');
+      triangle(280, 280, 250, 300, 290, 370);
+
+      fill('black');
+      triangle(320, 280, 350, 300, 300, 370);
+
+
+      fill('pink');
+      triangle(197, 276, 189, 317, 222, 289);
+
+      fill('pink');
+      triangle(428, 267, 395, 288, 431, 321);
+
+      fill('#d6a676');
+      arc(370, 700, 100, 100, PI, TWO_PI);
+
+      fill('#d6a676');
+      arc(240, 700, 100, 100, PI, TWO_PI);
+
+      fill('black');
+      arc(270, 700, 70, 70, PI, TWO_PI);
+
+      fill('black');
+      arc(340, 700, 70, 70, PI, TWO_PI);
+
+      fill('#d6a676');
+      arc(264, 600, 35, 55, PI, TWO_PI);
+
+      fill('#d6a676');
+      arc(350, 600, 35, 55, PI, TWO_PI);
+
+      fill('#d6a676');
+      rect(300, 610, 10, 90);
+
+      break;
 
   }
 
