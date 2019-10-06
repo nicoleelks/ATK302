@@ -13,7 +13,7 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  let s = 'Click the screen when the mouse is on the right side of the cat for a suprise!';
+  let s = 'Click the screen when the mouse is on the right side of the cat for a suprise! (Worked on mp2 for a total of 6 hours within atom and on p5js)';
   fill(50);
   text(s, 20, 50, 700, 100); // Text wraps within text box
   textSize(20)
