@@ -293,7 +293,7 @@ function draw() {
       fill('#d6a676');
       rect(300, 610, 10, 90);
 
-      doTimer(0, 50);
+      doTimer(2, 100);
       velocity = 0;
       break;
 
