@@ -1,7 +1,7 @@
 var myState = 0;
 var timer = 200;
 var x = 0;
-var velocity = 6;
+var velocity = 5;
 
 
 function setup() {
