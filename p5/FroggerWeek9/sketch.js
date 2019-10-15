@@ -1,5 +1,6 @@
 var cars = [];
-var frogPos ;
+var frogPos;
+var myState = 0 ;
 
 function setup() {
 
@@ -7,26 +8,42 @@ function setup() {
   for (var i = 0; i < 40; i++) {
     cars.push(new Car());
   }
-  frogPos = createVector(width/2, height-80) ;
-  rectMode(CENTER) ;
-  ellipseMode(CENTER) ;
+  frogPos = createVector(width / 2, height - 80);
+  rectMode(CENTER);
+  ellipseMode(CENTER);
 }
 
 function draw() {
-  background(100);
-  for (var i = 0; i < cars.length; i++) {
-    cars[i].display();
-    cars[i].drive();
-    if (cars[i].pos.dist(frogPos) < 50) {
-      cars.splice(i, 1) ;
-    }
+
+  switch (myState) {
+
+    case 0: // splash screen
+fill('blue');
+text("Welcome to the Game! Click the screen!" height/2, width/2) ;
+textSize(30) ;
+      break;
+
+    case 1: // the game state
+    game() ;
+      break;
+
+    case 2: // the win state
+      break;
+
+    case 3: // the lose state
+      break;
+
   }
 
-  // draw the frog
-  fill('green') ;
-  ellipse(frogPos.x, frogPos.y, 60, 60) ;
-  checkForKeys() ;
 }
+
+function mouseReleased() {
+  myState++ ;
+  if (myState > 3) {
+    myState = 0 ;
+  }
+}
+
 
 // car class!!
 function Car() {
@@ -42,8 +59,8 @@ function Car() {
   this.display = function() {
     fill(this.r, this.g, this.b);
     rect(this.pos.x, this.pos.y, 100, 50);
-    ellipse(this.pos.x-45, this.pos.y+25, 50, 50) ;
-    ellipse(this.pos.x+45, this.pos.y+25, 50, 50) ;
+    ellipse(this.pos.x - 45, this.pos.y + 25, 50, 50);
+    ellipse(this.pos.x + 45, this.pos.y + 25, 50, 50);
   }
 
   this.drive = function() {
@@ -65,4 +82,22 @@ function checkForKeys() {
   if (keyIsDown(UP_ARROW)) frogPos.y = frogPos.y - 5;
   if (keyIsDown(DOWN_ARROW)) frogPos.y = frogPos.y + 5;
 
+}
+
+
+function game() {
+  background(100);
+  for (var i = 0; i < cars.length; i++) {
+    cars[i].display();
+    cars[i].drive();
+    if (cars[i].pos.dist(frogPos) < 50) {
+      cars.splice(i, 1);
+    }
+  }
+
+  // draw the frog
+  fill('green');
+  ellipse(frogPos.x, frogPos.y, 60, 60);
+  checkForKeys();
+}
 }
