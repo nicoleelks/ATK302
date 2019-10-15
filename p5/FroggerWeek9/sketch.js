@@ -1,6 +1,6 @@
 var cars = [];
 var frogPos;
-var myState = 0 ;
+var myState = 0;
 
 function setup() {
 
@@ -18,16 +18,20 @@ function draw() {
   switch (myState) {
 
     case 0: // splash screen
-fill('blue');
-text("Welcome to the Game! Click the screen!" height/2, width/2) ;
-textSize(30) ;
+      fill('blue');
+      text("Welcome to the Game! Click the screen!"
+        height / 2, width / 2);
+      textSize(30);
       break;
 
     case 1: // the game state
-    game() ;
+      game();
       break;
 
     case 2: // the win state
+    background('yellow') ;
+    fill('red') ;
+    text("W I N N E R", height/2, width/2);
       break;
 
     case 3: // the lose state
@@ -38,9 +42,9 @@ textSize(30) ;
 }
 
 function mouseReleased() {
-  myState++ ;
+  myState++;
   if (myState > 3) {
-    myState = 0 ;
+    myState = 0;
   }
 }
 
