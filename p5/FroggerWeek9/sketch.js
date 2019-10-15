@@ -1,17 +1,18 @@
 var cars = [];
 var frogPos;
 var myState = 0;
+var timer = 0 ;
 
 function setup() {
 
   createCanvas(800, 800);
 
   // spawn cars
-  for (var i = 0; i < 40; i++) {
+  for (var i = 0; i < 5; i++) {
     cars.push(new Car());
   }
 
-  
+
   frogPos = createVector(width / 2, height - 80);
   rectMode(CENTER);
   ellipseMode(CENTER);
@@ -23,13 +24,18 @@ function draw() {
 
     case 0: // splash screen
       fill('blue');
-      text("Welcome to the Game! Click the screen!"
+      text("Welcome to the Game! Click the screen!")
         height / 2, width / 2);
       textSize(30);
       break;
 
     case 1: // the game state
       game();
+      timer++ ;
+      if (time>600) {
+        myState = 3 ;
+        timer = 0 ;
+      }
       break;
 
     case 2: // the win state
@@ -39,6 +45,10 @@ function draw() {
       break;
 
     case 3: // the lose state
+    background('blue') ;
+    fill('black') ;
+    text("Loser"), height/2, width/2);
+
       break;
 
   }
@@ -112,6 +122,10 @@ function game() {
     if (cars[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
     }
+  }
+
+  if (cars.length == 0) {
+    myState = 2 ;
   }
 
   // draw the frog
