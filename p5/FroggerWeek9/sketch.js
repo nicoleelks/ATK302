@@ -19,7 +19,7 @@ function draw() {
 
     case 0: // splash screen
       fill('blue');
-      text("Welcome to the Game! Click the screen!"
+      text("Welcome to the Game! Click the screen!")
         height / 2, width / 2);
       textSize(30);
       break;
@@ -31,7 +31,7 @@ function draw() {
     case 2: // the win state
     background('yellow') ;
     fill('red') ;
-    text("W I N N E R", height/2, width/2);
+    text("W I N N E R"), height/2, width/2);
       break;
 
     case 3: // the lose state
