@@ -5,9 +5,13 @@ var myState = 0;
 function setup() {
 
   createCanvas(800, 800);
+
+  // spawn cars
   for (var i = 0; i < 40; i++) {
     cars.push(new Car());
   }
+
+  
   frogPos = createVector(width / 2, height - 80);
   rectMode(CENTER);
   ellipseMode(CENTER);
@@ -19,7 +23,7 @@ function draw() {
 
     case 0: // splash screen
       fill('blue');
-      text("Welcome to the Game! Click the screen!")
+      text("Welcome to the Game! Click the screen!"
         height / 2, width / 2);
       textSize(30);
       break;
@@ -42,10 +46,21 @@ function draw() {
 }
 
 function mouseReleased() {
-  myState++;
-  if (myState > 3) {
-    myState = 0;
-  }
+switch(myState) {
+case 0:
+myState = 1;
+break;
+
+case 2: // the win myState
+myState = 0 ;
+break;
+
+case 3: // the lose mystate
+myState = 0 ;
+break ;
+
+
+}
 }
 
 
