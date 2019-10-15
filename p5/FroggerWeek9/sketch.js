@@ -23,6 +23,7 @@ function draw() {
   switch (myState) {
 
     case 0: // splash screen
+      background('white');
       fill('blue');
       text("Welcome to the Game! Click the screen!",
         height / 2, width / 2);
