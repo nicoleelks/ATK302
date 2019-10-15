@@ -24,7 +24,7 @@ function draw() {
 
     case 0: // splash screen
       fill('blue');
-      text("Welcome to the Game! Click the screen!")
+      text("Welcome to the Game! Click the screen!",
         height / 2, width / 2);
       textSize(30);
       break;
@@ -32,7 +32,7 @@ function draw() {
     case 1: // the game state
       game();
       timer++ ;
-      if (time>600) {
+      if (timer>6000) {
         myState = 3 ;
         timer = 0 ;
       }
@@ -41,13 +41,13 @@ function draw() {
     case 2: // the win state
     background('yellow') ;
     fill('red') ;
-    text("W I N N E R"), height/2, width/2);
+    text("W I N N E R", height/2, width/2);
       break;
 
     case 3: // the lose state
     background('blue') ;
     fill('black') ;
-    text("Loser"), height/2, width/2);
+    text("Loser", height/2, width/2);
 
       break;
 
@@ -62,10 +62,12 @@ myState = 1;
 break;
 
 case 2: // the win myState
+resetTheGame() ;
 myState = 0 ;
 break;
 
 case 3: // the lose mystate
+resetTheGame() ;
 myState = 0 ;
 break ;
 
@@ -113,6 +115,15 @@ function checkForKeys() {
 
 }
 
+function resetTheGame() {
+  cars = [] ;
+  for (var i = 0; i < 5; i++) {
+    cars.push(new Car());
+  }
+  timer = 0 ;
+}
+
+
 
 function game() {
   background(100);
@@ -132,5 +143,4 @@ function game() {
   fill('green');
   ellipse(frogPos.x, frogPos.y, 60, 60);
   checkForKeys();
-}
 }
