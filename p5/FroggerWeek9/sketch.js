@@ -33,7 +33,7 @@ function draw() {
     case 1: // the game state
       game();
       timer++;
-      if (timer > 6000) {
+      if (timer > 600) {
         myState = 3;
         timer = 0;
       }
