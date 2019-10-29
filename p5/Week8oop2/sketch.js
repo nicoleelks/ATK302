@@ -9,7 +9,9 @@ function setup() {
     cars.push(new Cars());
   }
   frogPos = createVector(width/2, height-80) ;
-}
+
+rectMode(CENTER) ;
+ellipseMode(CENTER) ; }
 
 function draw() {
   // put drawing code here
