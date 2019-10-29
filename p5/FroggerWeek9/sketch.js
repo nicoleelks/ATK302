@@ -46,6 +46,9 @@ function draw() {
       break;
 
     case 3: // the lose state
+      background('blue');
+      fill('black');
+      text("LOSER", width / 2, height / 2);
       break;
 
   }
