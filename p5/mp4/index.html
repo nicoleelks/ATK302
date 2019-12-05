@@ -16,7 +16,9 @@
 		if (location.protocol != 'https:') {
 		 location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 		}
+
 		function requestT() {
+
 			if (typeof(DeviceMotionEvent) !== 'undefined' && typeof(DeviceMotionEvent.requestPermission) === 'function') {
 			//	alert('enter');
 				DeviceMotionEvent.requestPermission().then(response => {
@@ -33,6 +35,7 @@
 				alert('DeviceMotionEvent is not defined');
 			}
 		}
+
 		document.onclick = function() {
 			requestT() ;
 			this.onclick=null;  // get rid of this so we only do the request once.
